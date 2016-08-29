@@ -31,16 +31,21 @@ public class pickingP extends javax.swing.JPanel {
         pickingid = new javax.swing.JLabel();
         pickingDate = new com.toedter.calendar.JDateChooser();
         pickingLabel04 = new javax.swing.JLabel();
-        remark_picking = new javax.swing.JTextField();
-        pickingLabel0３ = new javax.swing.JLabel();
+        pickingLabel03 = new javax.swing.JLabel();
         pickingLabel0２ = new javax.swing.JLabel();
         materialNum = new javax.swing.JComboBox<>();
         materialName = new javax.swing.JLabel();
         employeeNum = new javax.swing.JComboBox<>();
         employeeName = new javax.swing.JLabel();
+        pickingLabel05 = new javax.swing.JLabel();
+        pickingLabel06 = new javax.swing.JLabel();
+        pickingqty = new javax.swing.JSpinner();
+        pickingLabel07 = new javax.swing.JLabel();
+        pickingUnit = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        remark_picking = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        pickingqty = new javax.swing.JTextField();
+        stockNum = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -49,34 +54,30 @@ public class pickingP extends javax.swing.JPanel {
         jPanel1.setRequestFocusEnabled(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pickingLabel01.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        pickingLabel01.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         pickingLabel01.setText("領料單ID");
         jPanel1.add(pickingLabel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 53, -1, 30));
 
-        pickingid.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        pickingid.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         pickingid.setForeground(new java.awt.Color(0, 0, 153));
-        pickingid.setText("系統自動產生");
         jPanel1.add(pickingid, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 53, 180, 30));
 
-        pickingDate.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        pickingDate.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jPanel1.add(pickingDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 282, 30));
 
-        pickingLabel04.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        pickingLabel04.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         pickingLabel04.setText("備註");
-        jPanel1.add(pickingLabel04, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 319, 88, 31));
+        jPanel1.add(pickingLabel04, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 88, 31));
 
-        remark_picking.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        jPanel1.add(remark_picking, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 319, 736, -1));
+        pickingLabel03.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        pickingLabel03.setText("領料人員");
+        jPanel1.add(pickingLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 73, 30));
 
-        pickingLabel0３.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        pickingLabel0３.setText("領料人員");
-        jPanel1.add(pickingLabel0３, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 228, 73, 30));
-
-        pickingLabel0２.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        pickingLabel0２.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         pickingLabel0２.setText("原料編號");
         jPanel1.add(pickingLabel0２, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 138, 88, 30));
 
-        materialNum.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        materialNum.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         materialNum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         materialNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,33 +86,53 @@ public class pickingP extends javax.swing.JPanel {
         });
         jPanel1.add(materialNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 138, 180, 30));
 
-        materialName.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        materialName.setText("原料名");
-        jPanel1.add(materialName, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 138, 115, 30));
+        materialName.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(materialName, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 138, 160, 30));
 
-        employeeNum.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        employeeNum.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         employeeNum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         employeeNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 employeeNumActionPerformed(evt);
             }
         });
-        jPanel1.add(employeeNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 226, 180, -1));
+        jPanel1.add(employeeNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 180, -1));
 
-        employeeName.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        employeeName.setText("員工名");
-        jPanel1.add(employeeName, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 226, 115, 31));
+        employeeName.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(employeeName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 115, 31));
 
-        jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        jLabel1.setText("領料日期");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 138, 75, 30));
+        pickingLabel05.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        pickingLabel05.setText("領料日期");
+        jPanel1.add(pickingLabel05, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 138, 75, 30));
 
-        jLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        jLabel2.setText("領料數量");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 226, 75, 31));
+        pickingLabel06.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        pickingLabel06.setText("領料數量");
+        jPanel1.add(pickingLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 226, 75, 31));
 
-        pickingqty.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        jPanel1.add(pickingqty, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 226, 282, -1));
+        pickingqty.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(pickingqty, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 229, 116, -1));
+
+        pickingLabel07.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        pickingLabel07.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pickingLabel07.setText("單位");
+        jPanel1.add(pickingLabel07, new org.netbeans.lib.awtextra.AbsoluteConstraints(744, 226, -1, 33));
+
+        pickingUnit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(pickingUnit, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 229, 122, 30));
+
+        remark_picking.setColumns(20);
+        remark_picking.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        remark_picking.setRows(5);
+        jScrollPane1.setViewportView(remark_picking);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 316, 343, 139));
+
+        jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jLabel1.setText("庫存量");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 232, -1, -1));
+
+        stockNum.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(stockNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 227, 180, 31));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 470));
     }// </editor-fold>//GEN-END:initComponents
@@ -129,17 +150,22 @@ public class pickingP extends javax.swing.JPanel {
     private javax.swing.JLabel employeeName;
     private javax.swing.JComboBox<String> employeeNum;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel materialName;
     private javax.swing.JComboBox<String> materialNum;
     private com.toedter.calendar.JDateChooser pickingDate;
     private javax.swing.JLabel pickingLabel01;
+    private javax.swing.JLabel pickingLabel03;
     private javax.swing.JLabel pickingLabel04;
+    private javax.swing.JLabel pickingLabel05;
+    private javax.swing.JLabel pickingLabel06;
+    private javax.swing.JLabel pickingLabel07;
     private javax.swing.JLabel pickingLabel0２;
-    private javax.swing.JLabel pickingLabel0３;
+    private javax.swing.JComboBox<String> pickingUnit;
     private javax.swing.JLabel pickingid;
-    private javax.swing.JTextField pickingqty;
-    private javax.swing.JTextField remark_picking;
+    private javax.swing.JSpinner pickingqty;
+    private javax.swing.JTextArea remark_picking;
+    private javax.swing.JLabel stockNum;
     // End of variables declaration//GEN-END:variables
 }
