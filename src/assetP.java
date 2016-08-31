@@ -1,3 +1,6 @@
+
+import java.awt.event.KeyEvent;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -77,6 +80,11 @@ public class assetP extends javax.swing.JPanel {
         add(assetLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 123, -1, 30));
 
         value_asset.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        value_asset.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                value_assetKeyTyped(evt);
+            }
+        });
         add(value_asset, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 123, 150, 30));
 
         assetLabel07.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -86,6 +94,11 @@ public class assetP extends javax.swing.JPanel {
         lifespan_asset.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         lifespan_asset.setMinimumSize(new java.awt.Dimension(6, 30));
         lifespan_asset.setPreferredSize(new java.awt.Dimension(6, 30));
+        lifespan_asset.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                lifespan_assetKeyTyped(evt);
+            }
+        });
         add(lifespan_asset, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 191, 150, -1));
 
         assetLabel08.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -118,12 +131,37 @@ public class assetP extends javax.swing.JPanel {
         add(assetName_asset, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 123, 180, -1));
 
         qty_asset.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        qty_asset.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                qty_assetKeyTyped(evt);
+            }
+        });
         add(qty_asset, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 53, 150, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void department_assetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_department_assetActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_department_assetActionPerformed
+
+    private void qty_assetKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_qty_assetKeyTyped
+        char c = evt.getKeyChar();
+        if(!(Character.isDigit(c)) || (c == KeyEvent.VK_SPACE) || (c == KeyEvent.VK_DELETE)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_qty_assetKeyTyped
+
+    private void value_assetKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_value_assetKeyTyped
+        char c = evt.getKeyChar();
+        if(!(Character.isDigit(c)) || (c == KeyEvent.VK_SPACE) || (c == KeyEvent.VK_DELETE)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_value_assetKeyTyped
+
+    private void lifespan_assetKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lifespan_assetKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lifespan_assetKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

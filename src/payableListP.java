@@ -81,6 +81,11 @@ public class payableListP extends javax.swing.JPanel {
         add(purchaseLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 320, -1, 30));
 
         amount_Accn.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        amount_Accn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                amount_AccnKeyTyped(evt);
+            }
+        });
         add(amount_Accn, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 320, 180, 30));
 
         purchaseLabel07.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -88,6 +93,11 @@ public class payableListP extends javax.swing.JPanel {
         add(purchaseLabel07, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 118, -1, 30));
 
         actualPayAmount_Accn.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        actualPayAmount_Accn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                actualPayAmount_AccnKeyTyped(evt);
+            }
+        });
         add(actualPayAmount_Accn, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 120, 216, 30));
 
         purchaseLabel08.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -120,6 +130,11 @@ public class payableListP extends javax.swing.JPanel {
         add(purchaseLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 186, -1, 30));
 
         discount_Accn.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        discount_Accn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                discount_AccnKeyTyped(evt);
+            }
+        });
         add(discount_Accn, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 188, 216, 30));
 
         jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -162,6 +177,18 @@ public class payableListP extends javax.swing.JPanel {
     private void vendorNum_AccnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendorNum_AccnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_vendorNum_AccnActionPerformed
+
+    private void amount_AccnKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_amount_AccnKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_amount_AccnKeyTyped
+
+    private void actualPayAmount_AccnKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_actualPayAmount_AccnKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actualPayAmount_AccnKeyTyped
+
+    private void discount_AccnKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_discount_AccnKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_discount_AccnKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

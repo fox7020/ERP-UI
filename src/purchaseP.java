@@ -1,3 +1,6 @@
+
+import com.sun.glass.events.KeyEvent;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -85,6 +88,11 @@ public class purchaseP extends javax.swing.JPanel {
         add(purchaseLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 124, -1, 30));
 
         qty_Purc.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        qty_Purc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                qty_PurcKeyTyped(evt);
+            }
+        });
         add(qty_Purc, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 126, 150, 30));
 
         purchaseLabel07.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -92,6 +100,11 @@ public class purchaseP extends javax.swing.JPanel {
         add(purchaseLabel07, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 193, -1, 30));
 
         price_Purc.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        price_Purc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                price_PurcKeyTyped(evt);
+            }
+        });
         add(price_Purc, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 195, 150, 30));
 
         purchaseLabel08.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -164,6 +177,20 @@ public class purchaseP extends javax.swing.JPanel {
     private void vendorNum_PurcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendorNum_PurcActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_vendorNum_PurcActionPerformed
+
+    private void qty_PurcKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_qty_PurcKeyTyped
+        char c = evt.getKeyChar();
+        if(!(Character.isDigit(c)) || (c == KeyEvent.VK_SPACE) || (c == KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_qty_PurcKeyTyped
+
+    private void price_PurcKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_price_PurcKeyTyped
+       char c = evt.getKeyChar();
+        if(!(Character.isDigit(c)) || (c == KeyEvent.VK_SPACE) || (c == KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_price_PurcKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
