@@ -1,6 +1,8 @@
 
 import java.awt.Toolkit;
-
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -37,7 +39,7 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        login = new javax.swing.JPanel();
+        login_P = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         loginLabel02 = new javax.swing.JLabel();
         loginLabel01 = new javax.swing.JLabel();
@@ -56,24 +58,36 @@ public class login extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        login_P.setOpaque(false);
+        login_P.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("微軟正黑體", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ERP / 打卡系統");
+        login_P.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 16, 325, 82));
 
         loginLabel02.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         loginLabel02.setText("密碼");
+        login_P.add(loginLabel02, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 206, 122, 53));
 
         loginLabel01.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         loginLabel01.setText("員工編號");
+        login_P.add(loginLabel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 135, 122, 53));
+        login_P.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 107, 516, 10));
+        login_P.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 277, 516, 10));
 
         employID_login.setFont(new java.awt.Font("微軟正黑體", 0, 16)); // NOI18N
+        login_P.add(employID_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 135, 320, 53));
 
         employPW_login.setFont(new java.awt.Font("微軟正黑體", 0, 16)); // NOI18N
+        login_P.add(employPW_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 206, 320, 53));
 
         loginLabel03.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         loginLabel03.setText("修改密碼");
+        login_P.add(loginLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 296, 122, 53));
 
         employPwEdit_login.setFont(new java.awt.Font("微軟正黑體", 0, 16)); // NOI18N
+        login_P.add(employPwEdit_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 297, 320, 53));
 
         login_log.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         login_log.setForeground(new java.awt.Color(0, 0, 204));
@@ -85,10 +99,12 @@ public class login extends javax.swing.JFrame {
                 login_logActionPerformed(evt);
             }
         });
+        login_P.add(login_log, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 424, 152, 47));
 
         showResult_login.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         showResult_login.setForeground(new java.awt.Color(255, 51, 51));
         showResult_login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_P.add(showResult_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 359, 620, 47));
 
         onduty_log.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         onduty_log.setForeground(new java.awt.Color(102, 0, 102));
@@ -100,6 +116,7 @@ public class login extends javax.swing.JFrame {
                 onduty_logActionPerformed(evt);
             }
         });
+        login_P.add(onduty_log, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 424, 131, 47));
 
         offduty_log.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         offduty_log.setForeground(new java.awt.Color(102, 0, 102));
@@ -112,79 +129,9 @@ public class login extends javax.swing.JFrame {
                 offduty_logActionPerformed(evt);
             }
         });
+        login_P.add(offduty_log, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 424, 128, 47));
 
-        javax.swing.GroupLayout loginLayout = new javax.swing.GroupLayout(login);
-        login.setLayout(loginLayout);
-        loginLayout.setHorizontalGroup(
-            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(149, 149, 149))
-            .addGroup(loginLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(loginLayout.createSequentialGroup()
-                        .addComponent(onduty_log, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(offduty_log, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(87, 87, 87)
-                        .addComponent(login_log, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator1)
-                        .addComponent(jSeparator2)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                            .addGap(22, 22, 22)
-                            .addComponent(loginLabel03, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(employPwEdit_login, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(loginLabel01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(loginLabel02, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                            .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(employID_login)
-                                .addComponent(employPW_login, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(65, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(showResult_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        loginLayout.setVerticalGroup(
-            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(employID_login)
-                    .addComponent(loginLabel01, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(loginLabel02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(employPW_login, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginLabel03, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employPwEdit_login, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(showResult_login, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(login_log, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                    .addComponent(offduty_log, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(onduty_log, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(26, 26, 26))
-        );
-
-        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
+        getContentPane().add(login_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
 
         pack();
         setLocationRelativeTo(null);
@@ -244,10 +191,10 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JPanel login;
     private javax.swing.JLabel loginLabel01;
     private javax.swing.JLabel loginLabel02;
     private javax.swing.JLabel loginLabel03;
+    private javax.swing.JPanel login_P;
     private javax.swing.JButton login_log;
     private javax.swing.JButton offduty_log;
     private javax.swing.JButton onduty_log;
