@@ -77,6 +77,11 @@ public class login extends javax.swing.JFrame {
         login_P.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 277, 516, 10));
 
         employID_login.setFont(new java.awt.Font("微軟正黑體", 0, 16)); // NOI18N
+        employID_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                employID_loginMouseClicked(evt);
+            }
+        });
         login_P.add(employID_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 135, 320, 53));
 
         employPW_login.setFont(new java.awt.Font("微軟正黑體", 0, 16)); // NOI18N
@@ -87,6 +92,11 @@ public class login extends javax.swing.JFrame {
         login_P.add(loginLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 296, 122, 53));
 
         employPwEdit_login.setFont(new java.awt.Font("微軟正黑體", 0, 16)); // NOI18N
+        employPwEdit_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                employPwEdit_loginMouseClicked(evt);
+            }
+        });
         login_P.add(employPwEdit_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 297, 320, 53));
 
         login_log.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
@@ -148,6 +158,14 @@ public class login extends javax.swing.JFrame {
     private void offduty_logActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offduty_logActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_offduty_logActionPerformed
+
+    private void employPwEdit_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_employPwEdit_loginMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_employPwEdit_loginMouseClicked
+
+    private void employID_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_employID_loginMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_employID_loginMouseClicked
 
     /**
      * @param args the command line arguments
