@@ -51,6 +51,7 @@ public class purchaseP extends javax.swing.JPanel {
         vendorNum_Purc = new javax.swing.JComboBox<>();
         showInfo = new javax.swing.JLabel();
         SQLID = new javax.swing.JLabel();
+        unit_Purc = new javax.swing.JComboBox<>();
 
         setMinimumSize(new java.awt.Dimension(980, 470));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -162,8 +163,11 @@ public class purchaseP extends javax.swing.JPanel {
         add(showInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 80, 40));
 
         SQLID.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        SQLID.setText("jLabel1");
         add(SQLID, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 328, 183, -1));
+
+        unit_Purc.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        unit_Purc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(unit_Purc, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 125, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void employNum_PurcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employNum_PurcActionPerformed
@@ -214,6 +218,7 @@ public class purchaseP extends javax.swing.JPanel {
     private javax.swing.JTextField purchaseNum_Purc;
     private javax.swing.JTextField qty_Purc;
     private javax.swing.JLabel showInfo;
+    private javax.swing.JComboBox<String> unit_Purc;
     private javax.swing.JLabel vendorName_Purc;
     private javax.swing.JComboBox<String> vendorNum_Purc;
     // End of variables declaration//GEN-END:variables

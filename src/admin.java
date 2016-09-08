@@ -51,6 +51,9 @@ public class admin extends javax.swing.JFrame {
         member_admin = new javax.swing.ButtonGroup();
         sales_admin = new javax.swing.ButtonGroup();
         profit_admin = new javax.swing.ButtonGroup();
+        picking_admin = new javax.swing.ButtonGroup();
+        news_admin = new javax.swing.ButtonGroup();
+        dep_admin1 = new javax.swing.ButtonGroup();
         adminPanel = new javax.swing.JPanel();
         adminLabel01 = new javax.swing.JLabel();
         adminLabel02 = new javax.swing.JLabel();
@@ -116,23 +119,39 @@ public class admin extends javax.swing.JFrame {
         salesN_admin = new javax.swing.JRadioButton();
         salesY_admin = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
+        picking = new javax.swing.JLabel();
+        pickingY_admin = new javax.swing.JRadioButton();
+        pickingN_admin = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        webNewsY_admin = new javax.swing.JRadioButton();
+        webNewsN_admin = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        depY_admin = new javax.swing.JRadioButton();
+        depN_admin = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(980, 470));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         adminPanel.setMinimumSize(new java.awt.Dimension(980, 470));
+        adminPanel.setPreferredSize(new java.awt.Dimension(980, 470));
+        adminPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         adminLabel01.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         adminLabel01.setText("員工編號");
+        adminPanel.add(adminLabel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
 
         adminLabel02.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         adminLabel02.setText("登入密碼");
+        adminPanel.add(adminLabel02, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 10, -1, 30));
 
-        adminLabel04.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel04.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel04.setText("員工資料表");
+        adminPanel.add(adminLabel04, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 86, -1, -1));
 
-        adminLabel05.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel05.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel05.setText("出缺勤表");
+        adminPanel.add(adminLabel05, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 136, 75, -1));
 
         employeeNum_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         employeeNum_admin.setForeground(new java.awt.Color(0, 0, 204));
@@ -142,507 +161,333 @@ public class admin extends javax.swing.JFrame {
                 employeeNum_adminActionPerformed(evt);
             }
         });
+        adminPanel.add(employeeNum_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 10, 149, 30));
 
         adminLabel03.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         adminLabel03.setText("所屬單位");
+        adminPanel.add(adminLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(742, 10, -1, 30));
 
         empPasswd_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         empPasswd_admin.setForeground(new java.awt.Color(0, 0, 204));
         empPasswd_admin.setText("密碼");
+        adminPanel.add(empPasswd_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 187, 30));
 
         empDepat_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         empDepat_admin.setForeground(new java.awt.Color(0, 0, 204));
         empDepat_admin.setText("部門");
+        adminPanel.add(empDepat_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 145, 30));
 
         employeeName_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         employeeName_admin.setForeground(new java.awt.Color(0, 0, 204));
         employeeName_admin.setText("帶出員工姓名");
+        adminPanel.add(employeeName_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 10, -1, 30));
+        adminPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 980, 10));
 
-        adminLabel06.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel06.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel06.setText("員工考績表");
+        adminPanel.add(adminLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 182, -1, -1));
 
-        adminLabel07.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel07.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel07.setText("薪資表");
+        adminPanel.add(adminLabel07, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 232, 75, 29));
 
-        adminLabel08.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel08.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel08.setText("進貨表");
+        adminPanel.add(adminLabel08, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 284, 75, -1));
 
         employee_admin.add(employeeY_admin);
-        employeeY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        employeeY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         employeeY_admin.setText("Yes");
+        adminPanel.add(employeeY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 82, -1, -1));
 
         employee_admin.add(employeeN_admin);
-        employeeN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        employeeN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         employeeN_admin.setText("No");
+        adminPanel.add(employeeN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 82, 57, -1));
 
-        adminLabel10.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel10.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel10.setText("原料庫存表");
+        adminPanel.add(adminLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 86, -1, -1));
 
-        adminLabel11.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel11.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel11.setText("訂單資料表");
+        adminPanel.add(adminLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 136, -1, -1));
 
         attendance_admin.add(attendanceY_admin);
-        attendanceY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        attendanceY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         attendanceY_admin.setText("Yes");
+        adminPanel.add(attendanceY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 132, -1, -1));
 
         achievement_admin.add(achievementY_admin);
-        achievementY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        achievementY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         achievementY_admin.setText("Yes");
+        adminPanel.add(achievementY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 182, -1, -1));
 
         payRoll_admin.add(payRollY_admin);
-        payRollY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        payRollY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         payRollY_admin.setText("Yes");
+        adminPanel.add(payRollY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 232, -1, -1));
 
         purchase_admin.add(purchaseY_admin);
-        purchaseY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        purchaseY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         purchaseY_admin.setText("Yes");
+        adminPanel.add(purchaseY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 282, -1, -1));
 
         attendance_admin.add(attendanceN_admin);
-        attendanceN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        attendanceN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         attendanceN_admin.setText("No");
+        adminPanel.add(attendanceN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 132, 57, -1));
 
         achievement_admin.add(achievementN_admin);
-        achievementN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        achievementN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         achievementN_admin.setText("No");
+        adminPanel.add(achievementN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 182, 57, -1));
 
         payRoll_admin.add(payRollN_admin);
-        payRollN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        payRollN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         payRollN_admin.setText("No");
+        adminPanel.add(payRollN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 232, 57, -1));
 
         purchase_admin.add(purchaseN_admin);
-        purchaseN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        purchaseN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         purchaseN_admin.setText("No");
+        adminPanel.add(purchaseN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 282, 57, -1));
 
-        adminLabel12.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel12.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel12.setText("訂購項目表");
+        adminPanel.add(adminLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 186, -1, -1));
 
-        adminLabel13.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel13.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel13.setText("異常資料表");
+        adminPanel.add(adminLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 236, -1, -1));
 
-        adminLabel14.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel14.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel14.setText("應收管理表");
+        adminPanel.add(adminLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 284, -1, -1));
 
         material_admin.add(materialY_admin);
-        materialY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        materialY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         materialY_admin.setText("Yes");
+        adminPanel.add(materialY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 82, -1, -1));
 
         orderList_admin.add(orderListY_admin);
-        orderListY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        orderListY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         orderListY_admin.setText("Yes");
+        adminPanel.add(orderListY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 132, -1, -1));
 
         orderItem_admin.add(orderItemY_admin);
-        orderItemY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        orderItemY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         orderItemY_admin.setText("Yes");
+        adminPanel.add(orderItemY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 182, -1, -1));
 
         issue_admin.add(issueY_admin);
-        issueY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        issueY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         issueY_admin.setText("Yes");
+        adminPanel.add(issueY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 232, -1, -1));
 
         payableList_admin.add(payableListY_admin);
-        payableListY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        payableListY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         payableListY_admin.setText("Yes");
+        adminPanel.add(payableListY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 280, -1, -1));
 
         material_admin.add(materialN_admin);
-        materialN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        materialN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         materialN_admin.setText("No");
+        adminPanel.add(materialN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 82, 57, -1));
 
         orderList_admin.add(orderListN_admin);
-        orderListN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        orderListN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         orderListN_admin.setText("No");
+        adminPanel.add(orderListN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 132, 57, -1));
 
         orderItem_admin.add(orderItemN_admin);
-        orderItemN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        orderItemN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         orderItemN_admin.setText("No");
+        adminPanel.add(orderItemN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 182, 57, -1));
 
         issue_admin.add(issueN_admin);
-        issueN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        issueN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         issueN_admin.setText("No");
+        adminPanel.add(issueN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 232, 57, -1));
 
         payableList_admin.add(payableListN_admin);
-        payableListN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        payableListN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         payableListN_admin.setText("No");
+        adminPanel.add(payableListN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 280, 57, -1));
 
-        adminLabel15.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel15.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel15.setText("資產管理表");
+        adminPanel.add(adminLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 334, -1, -1));
 
-        adminLabel16.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel16.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel16.setText("客戶資料表");
+        adminPanel.add(adminLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 86, -1, -1));
 
-        adminLabel17.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel17.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel17.setText("廠商資料表");
+        adminPanel.add(adminLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 136, -1, -1));
 
-        adminLabel18.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel18.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel18.setText("帳號管理表");
+        adminPanel.add(adminLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 186, -1, -1));
 
-        adminLabel19.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel19.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel19.setText("公告管理表");
+        adminPanel.add(adminLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 236, -1, -1));
 
-        adminLabel09.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel09.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel09.setText("產品資料表");
+        adminPanel.add(adminLabel09, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 334, -1, -1));
 
         product_admin.add(productY_admin);
-        productY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        productY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         productY_admin.setText("Yes");
+        adminPanel.add(productY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 332, -1, -1));
 
         asset_admin.add(assetY_admin);
-        assetY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        assetY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         assetY_admin.setText("Yes");
+        adminPanel.add(assetY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 330, -1, -1));
 
         product_admin.add(productN_admin);
-        productN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        productN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         productN_admin.setText("No");
+        adminPanel.add(productN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 332, 57, -1));
 
         asset_admin.add(assetN_admin);
-        assetN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        assetN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         assetN_admin.setText("No");
+        adminPanel.add(assetN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 330, 57, -1));
 
         member_admin.add(memberY_admin);
-        memberY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        memberY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         memberY_admin.setText("Yes");
+        adminPanel.add(memberY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 82, -1, -1));
 
         vendor_admin.add(vendorY_admin);
-        vendorY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        vendorY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         vendorY_admin.setText("Yes");
+        adminPanel.add(vendorY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 132, -1, -1));
 
         adminList_admin.add(adminY_admin);
-        adminY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminY_admin.setText("Yes");
+        adminPanel.add(adminY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 182, -1, -1));
 
         billboard_admin.add(billboardY_admin);
-        billboardY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardY_admin.setText("Yes");
+        adminPanel.add(billboardY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 232, -1, -1));
 
         member_admin.add(memberN_admin);
-        memberN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        memberN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         memberN_admin.setText("No");
+        adminPanel.add(memberN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(879, 82, 57, -1));
 
         vendor_admin.add(vendorN_admin);
-        vendorN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        vendorN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         vendorN_admin.setText("No");
+        adminPanel.add(vendorN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(879, 132, 57, -1));
 
         adminList_admin.add(adminN_admin);
-        adminN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminN_admin.setText("No");
+        adminPanel.add(adminN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(879, 182, 57, -1));
 
         billboard_admin.add(billboardN_admin);
-        billboardN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardN_admin.setText("No");
+        adminPanel.add(billboardN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(879, 232, 57, -1));
 
-        adminLabel20.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        adminLabel20.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         adminLabel20.setText("備註");
+        adminPanel.add(adminLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 420, 75, -1));
 
         note_admin.setMaximumSize(new java.awt.Dimension(160, 30));
         note_admin.setMinimumSize(new java.awt.Dimension(160, 30));
         note_admin.setPreferredSize(new java.awt.Dimension(160, 30));
+        adminPanel.add(note_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, -1, 33));
 
-        jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel1.setText("營利報表");
+        adminPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 284, 75, -1));
 
         profit_admin.add(profitY_admin);
-        profitY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        profitY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         profitY_admin.setText("Yes");
-        profitY_admin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                profitY_adminActionPerformed(evt);
-            }
-        });
+        adminPanel.add(profitY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 280, -1, -1));
 
         profit_admin.add(profitN_admin);
-        profitN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        profitN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         profitN_admin.setText("No");
+        adminPanel.add(profitN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(879, 280, 57, -1));
 
         sales_admin.add(salesN_admin);
-        salesN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        salesN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         salesN_admin.setText("No");
+        adminPanel.add(salesN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(883, 330, 57, -1));
 
         sales_admin.add(salesY_admin);
-        salesY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        salesY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         salesY_admin.setText("Yes");
+        adminPanel.add(salesY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 330, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel2.setText("銷售報表");
+        adminPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 334, 75, -1));
 
-        javax.swing.GroupLayout adminPanelLayout = new javax.swing.GroupLayout(adminPanel);
-        adminPanel.setLayout(adminPanelLayout);
-        adminPanelLayout.setHorizontalGroup(
-            adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(adminPanelLayout.createSequentialGroup()
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(adminLabel01)
-                        .addGap(10, 10, 10)
-                        .addComponent(employeeNum_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(employeeName_admin)
-                        .addGap(75, 75, 75)
-                        .addComponent(adminLabel02)
-                        .addGap(10, 10, 10)
-                        .addComponent(empPasswd_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(adminLabel03)
-                        .addGap(6, 6, 6)
-                        .addComponent(empDepat_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(adminLabel04)
-                        .addGap(18, 18, 18)
-                        .addComponent(employeeY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(employeeN_admin)
-                        .addGap(72, 72, 72)
-                        .addComponent(adminLabel10)
-                        .addGap(6, 6, 6)
-                        .addComponent(materialY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(materialN_admin)
-                        .addGap(72, 72, 72)
-                        .addComponent(adminLabel16)
-                        .addGap(18, 18, 18)
-                        .addComponent(memberY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(memberN_admin))
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(adminLabel05)
-                        .addGap(36, 36, 36)
-                        .addComponent(attendanceY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(attendanceN_admin)
-                        .addGap(72, 72, 72)
-                        .addComponent(adminLabel11)
-                        .addGap(6, 6, 6)
-                        .addComponent(orderListY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(orderListN_admin)
-                        .addGap(72, 72, 72)
-                        .addComponent(adminLabel17)
-                        .addGap(18, 18, 18)
-                        .addComponent(vendorY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(vendorN_admin))
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(adminLabel06)
-                        .addGap(18, 18, 18)
-                        .addComponent(achievementY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(achievementN_admin)
-                        .addGap(72, 72, 72)
-                        .addComponent(adminLabel12)
-                        .addGap(6, 6, 6)
-                        .addComponent(orderItemY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(orderItemN_admin)
-                        .addGap(72, 72, 72)
-                        .addComponent(adminLabel18)
-                        .addGap(18, 18, 18)
-                        .addComponent(adminY_admin)
-                        .addGap(12, 12, 12)
-                        .addComponent(adminN_admin))
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(adminPanelLayout.createSequentialGroup()
-                                .addComponent(adminLabel07)
-                                .addGap(54, 54, 54)
-                                .addComponent(payRollY_admin)
-                                .addGap(12, 12, 12)
-                                .addComponent(payRollN_admin)
-                                .addGap(72, 72, 72)
-                                .addComponent(adminLabel13)
-                                .addGap(6, 6, 6)
-                                .addComponent(issueY_admin)
-                                .addGap(12, 12, 12)
-                                .addComponent(issueN_admin))
-                            .addGroup(adminPanelLayout.createSequentialGroup()
-                                .addComponent(adminLabel08)
-                                .addGap(54, 54, 54)
-                                .addComponent(purchaseY_admin)
-                                .addGap(12, 12, 12)
-                                .addComponent(purchaseN_admin)
-                                .addGap(72, 72, 72)
-                                .addComponent(adminLabel14)
-                                .addGap(6, 6, 6)
-                                .addComponent(payableListY_admin)
-                                .addGap(12, 12, 12)
-                                .addComponent(payableListN_admin))
-                            .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(adminPanelLayout.createSequentialGroup()
-                                    .addComponent(adminLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(note_admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(adminPanelLayout.createSequentialGroup()
-                                    .addComponent(adminLabel09)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(productY_admin)
-                                    .addGap(12, 12, 12)
-                                    .addComponent(productN_admin)
-                                    .addGap(72, 72, 72)
-                                    .addComponent(adminLabel15)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(assetY_admin)
-                                    .addGap(12, 12, 12)
-                                    .addComponent(assetN_admin))))
-                        .addGap(72, 72, 72)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(adminLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(adminPanelLayout.createSequentialGroup()
-                                .addComponent(billboardY_admin)
-                                .addGap(18, 18, 18)
-                                .addComponent(billboardN_admin))
-                            .addGroup(adminPanelLayout.createSequentialGroup()
-                                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(salesY_admin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(profitY_admin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(profitN_admin)
-                                    .addComponent(salesN_admin))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        adminPanelLayout.setVerticalGroup(
-            adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(adminPanelLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(adminLabel01, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employeeNum_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employeeName_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(adminLabel02, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empPasswd_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(adminLabel03, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empDepat_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(adminLabel04, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(employeeY_admin)
-                    .addComponent(employeeN_admin)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(adminLabel10))
-                    .addComponent(materialY_admin)
-                    .addComponent(materialN_admin)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(adminLabel16))
-                    .addComponent(memberY_admin)
-                    .addComponent(memberN_admin))
-                .addGap(20, 20, 20)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(adminLabel05, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(attendanceY_admin)
-                    .addComponent(attendanceN_admin)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(adminLabel11))
-                    .addComponent(orderListY_admin)
-                    .addComponent(orderListN_admin)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(adminLabel17))
-                    .addComponent(vendorY_admin)
-                    .addComponent(vendorN_admin))
-                .addGap(20, 20, 20)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(achievementY_admin)
-                    .addComponent(achievementN_admin)
-                    .addComponent(orderItemY_admin)
-                    .addComponent(orderItemN_admin)
-                    .addComponent(adminY_admin)
-                    .addComponent(adminN_admin)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(adminLabel06)
-                            .addComponent(adminLabel12)
-                            .addComponent(adminLabel18))))
-                .addGap(20, 20, 20)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(payRollY_admin)
-                    .addComponent(payRollN_admin)
-                    .addComponent(issueY_admin)
-                    .addComponent(issueN_admin)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(adminLabel07)
-                            .addComponent(adminLabel13)
-                            .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(adminLabel19)
-                                .addComponent(billboardY_admin)
-                                .addComponent(billboardN_admin)))))
-                .addGap(20, 20, 20)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(purchaseY_admin)
-                            .addComponent(purchaseN_admin)
-                            .addComponent(payableListY_admin)
-                            .addComponent(payableListN_admin)
-                            .addGroup(adminPanelLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(adminLabel08)
-                                    .addComponent(adminLabel14))))
-                        .addGap(20, 20, 20)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(productY_admin)
-                            .addComponent(productN_admin)
-                            .addComponent(assetY_admin)
-                            .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(assetN_admin)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(salesY_admin)
-                                .addComponent(salesN_admin))
-                            .addGroup(adminPanelLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(adminLabel09)
-                                    .addComponent(adminLabel15)))))
-                    .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(profitY_admin)
-                            .addComponent(profitN_admin))
-                        .addGap(52, 52, 52)))
-                .addGap(20, 20, 20)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(adminLabel20)
-                    .addComponent(note_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
+        picking.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        picking.setText("領料表");
+        adminPanel.add(picking, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 385, 75, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(adminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(adminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        picking_admin.add(pickingY_admin);
+        pickingY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        pickingY_admin.setText("Yes");
+        adminPanel.add(pickingY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 383, -1, -1));
+
+        picking_admin.add(pickingN_admin);
+        pickingN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        pickingN_admin.setText("No");
+        adminPanel.add(pickingN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 382, 59, 31));
+
+        jLabel3.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jLabel3.setText("最新消息");
+        jLabel3.setPreferredSize(new java.awt.Dimension(75, 21));
+        adminPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 385, -1, -1));
+
+        news_admin.add(webNewsY_admin);
+        webNewsY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        webNewsY_admin.setText("Yes");
+        webNewsY_admin.setPreferredSize(new java.awt.Dimension(57, 29));
+        adminPanel.add(webNewsY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 381, -1, -1));
+
+        news_admin.add(webNewsN_admin);
+        webNewsN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        webNewsN_admin.setText("No");
+        webNewsN_admin.setPreferredSize(new java.awt.Dimension(57, 29));
+        adminPanel.add(webNewsN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 381, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jLabel4.setText("部門管理");
+        jLabel4.setPreferredSize(new java.awt.Dimension(75, 21));
+        adminPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 378, -1, -1));
+
+        dep_admin1.add(depY_admin);
+        depY_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        depY_admin.setText("Yes");
+        depY_admin.setPreferredSize(new java.awt.Dimension(57, 29));
+        adminPanel.add(depY_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 374, -1, -1));
+
+        dep_admin1.add(depN_admin);
+        depN_admin.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        depN_admin.setText("No");
+        depN_admin.setPreferredSize(new java.awt.Dimension(57, 29));
+        adminPanel.add(depN_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(883, 374, -1, -1));
+
+        getContentPane().add(adminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void profitY_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profitY_adminActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_profitY_adminActionPerformed
 
     private void employeeNum_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeNum_adminActionPerformed
         // TODO add your handling code here:
@@ -720,6 +565,9 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JRadioButton billboardN_admin;
     private javax.swing.JRadioButton billboardY_admin;
     private javax.swing.ButtonGroup billboard_admin;
+    private javax.swing.JRadioButton depN_admin;
+    private javax.swing.JRadioButton depY_admin;
+    private javax.swing.ButtonGroup dep_admin1;
     private javax.swing.JLabel empDepat_admin;
     private javax.swing.JLabel empPasswd_admin;
     private javax.swing.JRadioButton employeeN_admin;
@@ -732,6 +580,8 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.ButtonGroup issue_admin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JRadioButton materialN_admin;
     private javax.swing.JRadioButton materialY_admin;
@@ -739,6 +589,7 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JRadioButton memberN_admin;
     private javax.swing.JRadioButton memberY_admin;
     private javax.swing.ButtonGroup member_admin;
+    private javax.swing.ButtonGroup news_admin;
     private javax.swing.JTextField note_admin;
     private javax.swing.JRadioButton orderItemN_admin;
     private javax.swing.JRadioButton orderItemY_admin;
@@ -752,6 +603,10 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JRadioButton payableListN_admin;
     private javax.swing.JRadioButton payableListY_admin;
     private javax.swing.ButtonGroup payableList_admin;
+    private javax.swing.JLabel picking;
+    private javax.swing.JRadioButton pickingN_admin;
+    private javax.swing.JRadioButton pickingY_admin;
+    private javax.swing.ButtonGroup picking_admin;
     private javax.swing.JRadioButton productN_admin;
     private javax.swing.JRadioButton productY_admin;
     private javax.swing.ButtonGroup product_admin;
@@ -767,5 +622,7 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JRadioButton vendorN_admin;
     private javax.swing.JRadioButton vendorY_admin;
     private javax.swing.ButtonGroup vendor_admin;
+    private javax.swing.JRadioButton webNewsN_admin;
+    private javax.swing.JRadioButton webNewsY_admin;
     // End of variables declaration//GEN-END:variables
 }

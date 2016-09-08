@@ -71,7 +71,7 @@ public class pickingP extends javax.swing.JPanel {
 
         pickingLabel03.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         pickingLabel03.setText("領料人員");
-        jPanel1.add(pickingLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 73, 30));
+        jPanel1.add(pickingLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 73, 30));
 
         pickingLabel0２.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         pickingLabel0２.setText("原料編號");
