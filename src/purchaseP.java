@@ -76,6 +76,7 @@ public class purchaseP extends javax.swing.JPanel {
         purchaseLabel04.setText("採購人員");
         add(purchaseLabel04, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 260, -1, 30));
 
+        purchaseDate_Purc.setDateFormatString("yyyy/MM/dd");
         purchaseDate_Purc.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         add(purchaseDate_Purc, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 195, 180, 30));
 
