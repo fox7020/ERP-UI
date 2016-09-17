@@ -41,11 +41,11 @@ public class pickingP extends javax.swing.JPanel {
         pickingLabel06 = new javax.swing.JLabel();
         pickingqty = new javax.swing.JSpinner();
         pickingLabel07 = new javax.swing.JLabel();
-        pickingUnit = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         remark_picking = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         stockNum = new javax.swing.JLabel();
+        pickingUnit = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -118,9 +118,6 @@ public class pickingP extends javax.swing.JPanel {
         pickingLabel07.setText("單位");
         jPanel1.add(pickingLabel07, new org.netbeans.lib.awtextra.AbsoluteConstraints(744, 226, -1, 33));
 
-        pickingUnit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(pickingUnit, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 229, 122, 30));
-
         remark_picking.setColumns(20);
         remark_picking.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         remark_picking.setRows(5);
@@ -134,6 +131,9 @@ public class pickingP extends javax.swing.JPanel {
 
         stockNum.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jPanel1.add(stockNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 227, 180, 31));
+
+        pickingUnit.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(pickingUnit, new org.netbeans.lib.awtextra.AbsoluteConstraints(792, 226, 110, 33));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 470));
     }// </editor-fold>//GEN-END:initComponents
@@ -163,7 +163,7 @@ public class pickingP extends javax.swing.JPanel {
     private javax.swing.JLabel pickingLabel06;
     private javax.swing.JLabel pickingLabel07;
     private javax.swing.JLabel pickingLabel0２;
-    private javax.swing.JComboBox<String> pickingUnit;
+    private javax.swing.JLabel pickingUnit;
     private javax.swing.JLabel pickingid;
     private javax.swing.JSpinner pickingqty;
     private javax.swing.JTextArea remark_picking;
