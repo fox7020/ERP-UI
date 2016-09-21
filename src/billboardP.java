@@ -26,6 +26,7 @@ public class billboardP extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         billboardLabel01 = new javax.swing.JLabel();
         billboardLabel02 = new javax.swing.JLabel();
         billboardLabel03 = new javax.swing.JLabel();
@@ -43,40 +44,41 @@ public class billboardP extends javax.swing.JPanel {
         employeeName_billboard = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(980, 470));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        billboardLabel01.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        billboardLabel01.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardLabel01.setText("公告編號");
-        add(billboardLabel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 53, -1, 30));
+        jPanel1.add(billboardLabel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 53, -1, 30));
 
-        billboardLabel02.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardLabel02.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardLabel02.setText("公告日期");
-        add(billboardLabel02, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 123, -1, 30));
+        jPanel1.add(billboardLabel02, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 123, -1, 30));
 
-        billboardLabel03.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardLabel03.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardLabel03.setText("公告維護者");
-        add(billboardLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 189, -1, 30));
+        jPanel1.add(billboardLabel03, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 189, -1, 30));
 
         issueDate_billboard.setDateFormatString("yyyy/MM/dd");
-        issueDate_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        add(issueDate_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 123, 180, 30));
+        issueDate_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(issueDate_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 123, 180, 30));
 
-        billboardLabel04.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardLabel04.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardLabel04.setText("公告內容");
-        add(billboardLabel04, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 264, -1, 30));
+        jPanel1.add(billboardLabel04, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 264, -1, 30));
 
         announce_billboard.setColumns(20);
         announce_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         announce_billboard.setRows(5);
         jScrollPane4.setViewportView(announce_billboard);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 300, 833, -1));
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 300, 833, -1));
 
-        id_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        id_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         id_billboard.setText("系統自動產生");
-        add(id_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 53, 180, 30));
+        jPanel1.add(id_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 53, 180, 30));
 
-        employeeNum_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        employeeNum_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         employeeNum_billboard.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         employeeNum_billboard.setMinimumSize(new java.awt.Dimension(73, 30));
         employeeNum_billboard.setPreferredSize(new java.awt.Dimension(73, 30));
@@ -85,26 +87,37 @@ public class billboardP extends javax.swing.JPanel {
                 employeeNum_billboardActionPerformed(evt);
             }
         });
-        add(employeeNum_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 189, 180, -1));
+        jPanel1.add(employeeNum_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 189, 180, -1));
 
-        billboardLabel05.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardLabel05.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardLabel05.setText("有效日期");
-        add(billboardLabel05, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 123, -1, 30));
+        jPanel1.add(billboardLabel05, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 123, -1, 30));
 
-        deadline_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        add(deadline_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 123, 282, 30));
+        deadline_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(deadline_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 123, 282, 30));
 
-        billboardLabel06.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
+        billboardLabel06.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         billboardLabel06.setText("備註");
-        add(billboardLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 192, 72, -1));
+        jPanel1.add(billboardLabel06, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 192, 72, -1));
 
-        remark_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        add(remark_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 189, 282, -1));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 248, 833, 10));
+        remark_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.add(remark_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 189, 282, -1));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 248, 833, 10));
 
         employeeName_billboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         employeeName_billboard.setText("員工名");
-        add(employeeName_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 192, 146, -1));
+        jPanel1.add(employeeName_billboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 192, 146, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 980, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void employeeNum_billboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeNum_billboardActionPerformed
@@ -125,6 +138,7 @@ public class billboardP extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> employeeNum_billboard;
     private javax.swing.JLabel id_billboard;
     private com.toedter.calendar.JDateChooser issueDate_billboard;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField remark_billboard;

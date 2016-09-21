@@ -3,6 +3,7 @@ import java.awt.Toolkit;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import java.awt.Graphics;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -39,7 +40,13 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        login_P = new javax.swing.JPanel();
+        login_P = new javax.swing.JPanel(){
+            public void paintComponent(Graphics g){
+                ImageIcon im = new ImageIcon("login_BG.jpg");
+                Image i = im.getImage();
+                g.drawImage(i,0, 0, this.getSize().width, this.getSize().height, this);
+            }
+        };
         jLabel1 = new javax.swing.JLabel();
         loginLabel02 = new javax.swing.JLabel();
         loginLabel01 = new javax.swing.JLabel();
@@ -58,10 +65,15 @@ public class login extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        login_P.setBackground(new java.awt.Color(0, 153, 102));
+        login_P.setMaximumSize(new java.awt.Dimension(650, 500));
+        login_P.setMinimumSize(new java.awt.Dimension(650, 500));
         login_P.setOpaque(false);
+        login_P.setPreferredSize(new java.awt.Dimension(650, 500));
         login_P.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("微軟正黑體", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(131, 62, 24));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ERP / 打卡系統");
         login_P.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 16, 325, 82));
