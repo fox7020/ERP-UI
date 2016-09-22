@@ -26,6 +26,7 @@ public class department extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         depLabel1 = new javax.swing.JLabel();
         depLabel2 = new javax.swing.JLabel();
         id_department = new javax.swing.JLabel();
@@ -40,42 +41,59 @@ public class department extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(980, 470));
         setMinimumSize(new java.awt.Dimension(980, 470));
         setPreferredSize(new java.awt.Dimension(980, 470));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(980, 470));
+        jPanel1.setMinimumSize(new java.awt.Dimension(980, 470));
+        jPanel1.setPreferredSize(new java.awt.Dimension(980, 470));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         depLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         depLabel1.setText("部門ID");
-        add(depLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, 30));
+        jPanel1.add(depLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, 30));
 
         depLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         depLabel2.setText("部門名稱");
         depLabel2.setMaximumSize(new java.awt.Dimension(75, 25));
         depLabel2.setMinimumSize(new java.awt.Dimension(75, 25));
         depLabel2.setPreferredSize(new java.awt.Dimension(75, 25));
-        add(depLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
+        jPanel1.add(depLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
 
         id_department.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(id_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 269, 30));
+        jPanel1.add(id_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 269, 30));
 
         depName_department.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(depName_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 269, -1));
+        jPanel1.add(depName_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 269, -1));
 
         depLabel3.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         depLabel3.setText("職銜");
-        add(depLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 296, -1, -1));
+        jPanel1.add(depLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 296, -1, -1));
 
         title_department.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(title_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 293, 269, -1));
+        jPanel1.add(title_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 293, 269, -1));
 
         jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel1.setText("備註");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 197, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 197, -1, -1));
 
         note_department.setColumns(20);
         note_department.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         note_department.setRows(5);
         jScrollPane1.setViewportView(note_department);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 197, 370, 123));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 197, 370, 123));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -86,6 +104,7 @@ public class department extends javax.swing.JPanel {
     private javax.swing.JTextField depName_department;
     private javax.swing.JLabel id_department;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea note_department;
     private javax.swing.JTextField title_department;

@@ -26,13 +26,22 @@ public class Empty extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbBillboard = new javax.swing.JTable();
 
+        setMaximumSize(new java.awt.Dimension(980, 470));
+        setMinimumSize(new java.awt.Dimension(980, 470));
         setPreferredSize(new java.awt.Dimension(980, 470));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setVerifyInputWhenFocusTarget(false);
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(980, 470));
+        jPanel1.setMinimumSize(new java.awt.Dimension(980, 470));
+        jPanel1.setPreferredSize(new java.awt.Dimension(980, 470));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPane1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jScrollPane1.setOpaque(false);
 
         tbBillboard.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
         tbBillboard.setModel(new javax.swing.table.DefaultTableModel(
@@ -49,11 +58,25 @@ public class Empty extends javax.swing.JPanel {
         tbBillboard.setTableHeader(null);
         jScrollPane1.setViewportView(tbBillboard);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 13, 951, 444));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 13, 951, 444));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tbBillboard;
     // End of variables declaration//GEN-END:variables
