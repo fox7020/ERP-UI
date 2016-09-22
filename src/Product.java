@@ -63,24 +63,24 @@ public class Product extends javax.swing.JPanel {
 
         label_productName.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         label_productName.setText("品名");
-        add(label_productName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, 20));
+        add(label_productName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, 20));
 
         label_category.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         label_category.setText("類別");
-        add(label_category, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, -1, -1));
+        add(label_category, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, -1, -1));
 
         label_note.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         label_note.setText("備註");
-        add(label_note, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, -1));
+        add(label_note, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, -1, -1));
 
         text_note.setColumns(20);
         text_note.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         text_note.setRows(5);
         jScrollPane2.setViewportView(text_note);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 630, -1));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 630, -1));
 
-        add(CBcategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 195, 200, 35));
+        add(CBcategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 160, 200, 35));
 
         text_price.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         text_price.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -94,7 +94,7 @@ public class Product extends javax.swing.JPanel {
         add(label_pNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 200, 35));
 
         text_productName.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(text_productName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 195, 200, 35));
+        add(text_productName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 200, 35));
     }// </editor-fold>//GEN-END:initComponents
 
     private void text_priceKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_text_priceKeyTyped

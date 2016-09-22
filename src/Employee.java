@@ -49,6 +49,8 @@ public class Employee extends javax.swing.JPanel {
         txtNote = new javax.swing.JEditorPane();
         lbEmployeeNum = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(980, 470));
+        setMinimumSize(new java.awt.Dimension(980, 470));
         setPreferredSize(new java.awt.Dimension(980, 470));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -58,38 +60,38 @@ public class Employee extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel2.setText("姓名");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 108, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel3.setText("住址");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 153, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel4.setText("電話");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 218, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel5.setText("性別");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 277, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
 
         txtTel.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 212, 225, -1));
+        add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 225, -1));
 
         txtName.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 105, 225, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 225, -1));
 
         txtAddress.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 150, 225, -1));
+        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 225, -1));
 
         bgGender.add(rbMale);
         rbMale.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         rbMale.setText("男");
-        add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 273, -1, -1));
+        add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, -1, -1));
 
         bgGender.add(rbFemale);
         rbFemale.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         rbFemale.setText("女");
-        add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 273, -1, -1));
+        add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel6.setText("出生年月日");
@@ -103,18 +105,18 @@ public class Employee extends javax.swing.JPanel {
 
         jLabel8.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel8.setText("部門");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(567, 108, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel9.setText("職等");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(567, 153, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel10.setText("備註");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(567, 215, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 280, -1, -1));
 
         cbPosition.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(cbPosition, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 150, 274, -1));
+        add(cbPosition, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 274, -1));
 
         cbDepartment.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         cbDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "　　", " " }));
@@ -123,12 +125,12 @@ public class Employee extends javax.swing.JPanel {
                 cbDepartmentActionPerformed(evt);
             }
         });
-        add(cbDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 105, 274, -1));
+        add(cbDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 274, -1));
 
         txtNote.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(txtNote);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 212, 274, 90));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 274, 110));
 
         lbEmployeeNum.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         add(lbEmployeeNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 62, 225, 25));
