@@ -26,6 +26,7 @@ public class PayRoll extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -36,32 +37,35 @@ public class PayRoll extends javax.swing.JPanel {
         txtEmpoyeeNum = new javax.swing.JFormattedTextField();
         lbName = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(980, 470));
+        setMinimumSize(new java.awt.Dimension(980, 470));
         setPreferredSize(new java.awt.Dimension(980, 470));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel1.setText("員工編號");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 62, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel2.setText("薪資");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 247, 60, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 60, 30));
 
         jLabel7.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 160, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 160, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         jLabel10.setText("備註");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 67, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 67, -1, -1));
 
         txtNote.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(txtNote);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 62, 254, 216));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 62, 254, 216));
 
         txtPay.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,##0"))));
         txtPay.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(txtPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 248, 225, 30));
+        jPanel1.add(txtPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 225, 30));
 
         txtEmpoyeeNum.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
         txtEmpoyeeNum.setToolTipText("");
@@ -71,10 +75,21 @@ public class PayRoll extends javax.swing.JPanel {
                 txtEmpoyeeNumKeyReleased(evt);
             }
         });
-        add(txtEmpoyeeNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 62, 225, 31));
+        jPanel1.add(txtEmpoyeeNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 225, 31));
 
         lbName.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(lbName, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 106, 225, 29));
+        jPanel1.add(lbName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 225, 29));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEmpoyeeNumKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmpoyeeNumKeyReleased
@@ -87,6 +102,7 @@ public class PayRoll extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbName;
     private javax.swing.JFormattedTextField txtEmpoyeeNum;
