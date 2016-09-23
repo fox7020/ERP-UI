@@ -6,14 +6,14 @@
 
 /**
  *
- * @author fox70
+ * @author asus
  */
-public class WebNews extends javax.swing.JPanel {
+public class webNews extends javax.swing.JPanel {
 
     /**
-     * Creates new form Employee
+     * Creates new form webNews
      */
-    public WebNews() {
+    public webNews() {
         initComponents();
     }
 
@@ -27,110 +27,112 @@ public class WebNews extends javax.swing.JPanel {
     private void initComponents() {
 
         bgPublish = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         txtTitle = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtContent = new javax.swing.JTextArea();
         rbPublish = new javax.swing.JRadioButton();
         rbPrivate = new javax.swing.JRadioButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtNote = new javax.swing.JEditorPane();
-        lbId = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtContent = new javax.swing.JTextArea();
         btnChooseFile = new javax.swing.JButton();
         btnWatchFile = new javax.swing.JButton();
         lbFilePath = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtNote = new javax.swing.JTextArea();
+        lbId = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(980, 470));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMaximumSize(new java.awt.Dimension(980, 470));
+        setMinimumSize(new java.awt.Dimension(980, 470));
+
+        jPanel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jPanel1.setMaximumSize(new java.awt.Dimension(980, 470));
+        jPanel1.setMinimumSize(new java.awt.Dimension(980, 470));
+        jPanel1.setPreferredSize(new java.awt.Dimension(980, 470));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        jLabel1.setText("ID:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 62, -1, -1));
+        jLabel1.setText("ID");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 73, 45, -1));
 
         jLabel2.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        jLabel2.setText("標題:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 160, -1, -1));
+        jLabel2.setText("標題");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 45, -1));
 
         jLabel3.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        jLabel3.setText("內容:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 255, -1, -1));
+        jLabel3.setText("內容");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jLabel4.setText("上架");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 70, 44, -1));
 
         jLabel5.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        jLabel5.setText("上架:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 62, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 180, 30, -1));
 
-        txtTitle.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
-        add(txtTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 158, 266, -1));
+        jLabel6.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        jLabel6.setText("備註");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, -1, -1));
 
-        rbPublish.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        rbPublish.setText("是");
-        add(rbPublish, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 58, -1, -1));
-
-        rbPrivate.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        rbPrivate.setText("否");
-        add(rbPrivate, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 58, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("微軟正黑體", 0, 18)); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(543, 140, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        jLabel10.setText("備註");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 236, -1, -1));
-
-        txtNote.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
-        jScrollPane1.setViewportView(txtNote);
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 236, 259, 129));
-
-        lbId.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(lbId, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 58, 266, 25));
+        txtTitle.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        txtTitle.setText("jTextField2");
+        jPanel1.add(txtTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 319, -1));
 
         txtContent.setColumns(20);
         txtContent.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         txtContent.setRows(5);
-        jScrollPane2.setViewportView(txtContent);
+        jScrollPane1.setViewportView(txtContent);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 236, -1, 129));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 319, 141));
+
+        bgPublish.add(rbPublish);
+        rbPublish.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        rbPublish.setText("是");
+        jPanel1.add(rbPublish, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 70, -1, -1));
+
+        bgPublish.add(rbPrivate);
+        rbPrivate.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        rbPrivate.setText("否");
+        jPanel1.add(rbPrivate, new org.netbeans.lib.awtextra.AbsoluteConstraints(718, 70, -1, -1));
 
         btnChooseFile.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         btnChooseFile.setText("選擇檔案");
-        btnChooseFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnChooseFileActionPerformed(evt);
-            }
-        });
-        add(btnChooseFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 122, 100, 26));
+        jPanel1.add(btnChooseFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 117, -1, -1));
 
         btnWatchFile.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
         btnWatchFile.setText("查看檔案");
-        btnWatchFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnWatchFileActionPerformed(evt);
-            }
-        });
-        add(btnWatchFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 122, 123, 26));
+        jPanel1.add(btnWatchFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(718, 117, -1, -1));
 
-        lbFilePath.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        add(lbFilePath, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 166, 385, 33));
+        lbFilePath.setFont(new java.awt.Font("微軟正黑體", 0, 12)); // NOI18N
+        lbFilePath.setText("jLabel7");
+        jPanel1.add(lbFilePath, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 430, 30));
 
-        jLabel4.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
-        jLabel4.setText("標題:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 166, -1, -1));
+        txtNote.setColumns(20);
+        txtNote.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
+        txtNote.setRows(5);
+        jScrollPane2.setViewportView(txtNote);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 318, -1));
+
+        lbId.setFont(new java.awt.Font("微軟正黑體", 0, 15)); // NOI18N
+        lbId.setText("jLabel7");
+        jPanel1.add(lbId, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 73, 316, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnChooseFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChooseFileActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnChooseFileActionPerformed
-
-    private void btnWatchFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWatchFileActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnWatchFileActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -138,12 +140,12 @@ public class WebNews extends javax.swing.JPanel {
     private javax.swing.JButton btnChooseFile;
     private javax.swing.JButton btnWatchFile;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lbFilePath;
@@ -151,7 +153,7 @@ public class WebNews extends javax.swing.JPanel {
     private javax.swing.JRadioButton rbPrivate;
     private javax.swing.JRadioButton rbPublish;
     private javax.swing.JTextArea txtContent;
-    private javax.swing.JEditorPane txtNote;
+    private javax.swing.JTextArea txtNote;
     private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
 }

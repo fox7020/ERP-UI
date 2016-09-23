@@ -341,6 +341,7 @@ public class salesReport extends javax.swing.JPanel {
         jPanel1.setMaximumSize(new java.awt.Dimension(980, 470));
         jPanel1.setMinimumSize(new java.awt.Dimension(980, 470));
         jPanel1.setPreferredSize(new java.awt.Dimension(980, 470));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         year.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -350,6 +351,7 @@ public class salesReport extends javax.swing.JPanel {
                 yearActionPerformed(evt);
             }
         });
+        jPanel1.add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, 40));
 
         month.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         month.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -358,6 +360,7 @@ public class salesReport extends javax.swing.JPanel {
                 monthActionPerformed(evt);
             }
         });
+        jPanel1.add(month, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, -1, 40));
 
         shift.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         shift.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -366,6 +369,7 @@ public class salesReport extends javax.swing.JPanel {
                 shiftActionPerformed(evt);
             }
         });
+        jPanel1.add(shift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, 40));
 
         product.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         product.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -374,22 +378,30 @@ public class salesReport extends javax.swing.JPanel {
                 productActionPerformed(evt);
             }
         });
+        jPanel1.add(product, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, -1, 40));
 
         label_total.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_total.setText("總額");
+        jPanel1.add(label_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 160, 100, 40));
 
         label_date.setText("日期區間");
         label_date.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(label_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 150, -1));
 
         label_shift.setText("班別");
+        jPanel1.add(label_shift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, -1));
 
         label_product.setText("產品");
+        jPanel1.add(label_product, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, -1, -1));
 
         jLabel1.setText("年");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
 
         jLabel2.setText("月");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
 
         labelEmp.setText("值班人員");
+        jPanel1.add(labelEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, -1, -1));
 
         employee.setFont(new java.awt.Font("微軟正黑體", 0, 14)); // NOI18N
         employee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -398,72 +410,7 @@ public class salesReport extends javax.swing.JPanel {
                 employeeActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(120, 120, 120)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(label_date, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(120, 120, 120)
-                            .addComponent(label_shift)
-                            .addGap(74, 74, 74)
-                            .addComponent(labelEmp)
-                            .addGap(38, 38, 38)
-                            .addComponent(label_product))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(70, 70, 70)
-                                    .addComponent(jLabel1))
-                                .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(22, 22, 22)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(70, 70, 70)
-                                    .addComponent(jLabel2)))
-                            .addGap(72, 72, 72)
-                            .addComponent(shift, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(37, 37, 37)
-                            .addComponent(employee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(37, 37, 37)
-                            .addComponent(product, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(77, 77, 77)
-                            .addComponent(label_total, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(120, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(153, 153, 153)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(label_date)
-                        .addComponent(label_shift)
-                        .addComponent(labelEmp)
-                        .addComponent(label_product))
-                    .addGap(17, 17, 17)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(shift, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(employee, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(product, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label_total, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))))
-                    .addContainerGap(237, Short.MAX_VALUE)))
-        );
+        jPanel1.add(employee, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, -1, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
